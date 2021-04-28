@@ -32,7 +32,7 @@ var (
 	"EventKind": "{{ .InvolvedObject.Kind }}",
 	"EventReason": "{{ .Reason }}",
 	"EventTime": "{{ .LastTimestamp }}",
-	"EventMessage": "{{ .Message }}"
+	"EventMessage": "{{ .InvolvedObject.Namespace }}/{{ .InvolvedObject.Name }}; {{ .Message }}"
 }`
 )
 
